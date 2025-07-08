@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>冠智的市調評估</title>
+
+<!-- 全站樣式 -->
+<link rel="stylesheet" href="style.css" />
+
+<!-- 先載 html2canvas，再載你的 script.js（都要 defer） -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- ★ 背景圖請在 style.css 的 body 裡自行設定 url() ★ -->
+  <div class="overlay">
+    <!-- ① 基本資料 -->
+    <div id="basicInfoSection">
+      <h2 class="title">冠智的市調－健檢問卷</h2>
+
+      <label>姓名</label>
+      <input id="name" type="text" placeholder="例如 王小明" required />
+
+      <label>聯絡電話</label>
+      <input id="phone" type="tel" placeholder="例如 0912345678" required />
+
+      <label>Line ID</label>
+      <input id="lineId" type="text" placeholder="例如 myline123" required />
+
+      <label>生日</label>
+      <input id="birthday" type="date" required />
+
+      <button id="nextBtn" type="button">下一步</button>
+    </div>
+
+    <!-- ② 職業選擇 + 問卷 -->
+    <div id="questionSection" style="display:none">
+      <div id="jobSection" class="field-block">
+        <label>請選擇您的職業類別</label>
+        <select id="job" required>
+          <option value="">請選擇</option>
+          <option value="一般上班族">一般上班族</option>
+          <option value="自營業者">自營業者</option>
+          <option value="領導主管">領導主管</option>
+          <option value="計程車司機">計程車司機</option>
+          <option value="公職/醫療">公職／醫療</option>
+        </select>
+      </div>
+
+      <!-- 問卷題目動態插入 -->
+      <form id="questionForm"></form>
+    </div>
+  </div>
+</body>
+</html>
