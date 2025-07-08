@@ -157,7 +157,7 @@ async function showResult (qs) {
   const btnWrap = document.createElement('div');
   btnWrap.style.cssText = 'text-align:center;margin:20px 0;';
 
-  const addUrl = 'https://line.me/R/ti/p/%40637zzurf';
+  const addUrl = 'https://line.me/R/ti/p/%40238uypdm';
   const lineA  = document.createElement('a');
   lineA.textContent = 'LINE 諮詢';
   lineA.href   = addUrl;
