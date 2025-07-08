@@ -173,7 +173,7 @@ async function showResult (qs) {
     const isAndroid = /\bAndroid\b/i.test(ua) && !/Windows/i.test(ua);
     if (isIOS || isAndroid) {
       e.preventDefault();
-      location.href = 'line://ti/p/637zzurf';
+      location.href = 'line://ti/p/238uypdm';
       setTimeout(() => location.href = addUrl, 800);
     }
   });
